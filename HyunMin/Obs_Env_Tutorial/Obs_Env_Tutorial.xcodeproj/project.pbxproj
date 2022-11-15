@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE430DEB2923AEDE00044745 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE430DEA2923AEDE00044745 /* SecondView.swift */; };
+		DE430DED2923B1BC00044745 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE430DEC2923B1BC00044745 /* ThirdView.swift */; };
+		DE430DEF2923B1DA00044745 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE430DEE2923B1DA00044745 /* FourthView.swift */; };
 		DE55208429238DB200710E19 /* Obs_Env_TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55208329238DB200710E19 /* Obs_Env_TutorialApp.swift */; };
 		DE55208629238DB200710E19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55208529238DB200710E19 /* ContentView.swift */; };
 		DE55208829238DB400710E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE55208729238DB400710E19 /* Assets.xcassets */; };
 		DE55208B29238DB400710E19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE55208A29238DB400710E19 /* Preview Assets.xcassets */; };
+		DE5520922923918E00710E19 /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5520912923918E00710E19 /* TimerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE430DEA2923AEDE00044745 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		DE430DEC2923B1BC00044745 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		DE430DEE2923B1DA00044745 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		DE55208029238DB200710E19 /* Obs_Env_Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obs_Env_Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE55208329238DB200710E19 /* Obs_Env_TutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obs_Env_TutorialApp.swift; sourceTree = "<group>"; };
 		DE55208529238DB200710E19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE55208729238DB400710E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE55208A29238DB400710E19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE5520912923918E00710E19 /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				DE55208329238DB200710E19 /* Obs_Env_TutorialApp.swift */,
+				DE5520912923918E00710E19 /* TimerData.swift */,
 				DE55208529238DB200710E19 /* ContentView.swift */,
+				DE430DEA2923AEDE00044745 /* SecondView.swift */,
+				DE430DEC2923B1BC00044745 /* ThirdView.swift */,
+				DE430DEE2923B1DA00044745 /* FourthView.swift */,
 				DE55208729238DB400710E19 /* Assets.xcassets */,
 				DE55208929238DB400710E19 /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE55208629238DB200710E19 /* ContentView.swift in Sources */,
+				DE430DED2923B1BC00044745 /* ThirdView.swift in Sources */,
 				DE55208429238DB200710E19 /* Obs_Env_TutorialApp.swift in Sources */,
+				DE430DEB2923AEDE00044745 /* SecondView.swift in Sources */,
+				DE430DEF2923B1DA00044745 /* FourthView.swift in Sources */,
+				DE5520922923918E00710E19 /* TimerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

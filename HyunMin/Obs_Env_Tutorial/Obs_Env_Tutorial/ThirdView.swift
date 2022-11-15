@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ThirdView.swift
 //  Obs_Env_Tutorial
 //
 //  Created by /Chynmn/M1 pro—̳͟͞͞♡ on 2022/11/15.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    
-    @ObservedObject var timerData: TimerData = TimerData()
-    
+struct ThirdView: View {
+    @EnvironmentObject var timerData: TimerData
+
     var body: some View {
         
         NavigationView {
@@ -22,7 +21,7 @@ struct ContentView: View {
                     Button(action: resetCount) {
                         Text("Reset Counter")
                     }
-                    NavigationLink(destination: SecondView(timerData: timerData)) {
+                    NavigationLink(destination: FourthView()) {
                         Text("Next Screen")
                     }
                     .padding()
@@ -33,10 +32,9 @@ struct ContentView: View {
         timerData.resetCount()
     }
 }
-        
-        
-struct ContentView_Previews: PreviewProvider {
+
+struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ThirdView().environmentObject(TimerData())
     }
 }
