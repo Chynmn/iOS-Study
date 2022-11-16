@@ -8,41 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @ObservedObject var carStore: CarStore = CarStore(cars: carData)
-    @ObservedObject var carStore: CarStore = CarStore(cars: carData)
+    //@ObservedObject var carStore: CarStore = CarStore(cars: carData)
+    @EnvironmentObject var carStore: CarStore
     
-    @State var cardatas = carData
+    @State var cars: [Car] = []
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(cardatas) { car in
+                ForEach(cars) { car in
                     ListCell(car: car)
                 }
                 .onDelete(perform: deleteItems)
                 .onMove(perform: moveItems)
             }
             .navigationTitle(Text("EV Cars"))
-            .navigationBarItems(leading: Button(action: {
-                // UUID() : 유일한 식별자를 생성하는 메서드
-                let newCar = Car(id: UUID().uuidString, name: "231", description: "description", isHybrid: true, imageName: "tesla_model_3")
-                
-                cardatas.append(newCar)
-                print(cardatas.count)
-            }, label: {
+            .navigationBarItems(leading: NavigationLink(destination: AddNewCar(), label: {
                 Text("Add")
-            }), trailing: EditButton())
+                    .foregroundColor(.blue)
+            }))
+        }
+        .onReceive(carStore.$cars) { receiveData in
+            cars = receiveData
         }
     }
     
     // 선택된 행의 오프셋이 인자로 전달됨
     func deleteItems(at offsets: IndexSet) {
-        cardatas.remove(atOffsets: offsets)
+        carStore.cars.remove(atOffsets: offsets)
     }
     
     // 오프셋과 함께 이동된 위치가 전달됨
     func moveItems(from source: IndexSet, to destination: Int) {
-        cardatas.move(fromOffsets: source, toOffset: destination)
+        carStore.cars.move(fromOffsets: source, toOffset: destination)
     }
 }
 
@@ -63,6 +61,6 @@ struct ListCell: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(CarStore(cars: carData))
     }
 }

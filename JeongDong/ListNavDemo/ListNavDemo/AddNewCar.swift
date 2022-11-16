@@ -9,7 +9,10 @@ import SwiftUI
 
 struct AddNewCar: View {
     
-    @ObservedObject var carStore : CarStore
+    //@ObservedObject var carStore : CarStore
+    @EnvironmentObject var carStore : CarStore
+    
+    @State var cars: [Car] = []
     
     @State private var isHybrid = false
     @State private var name: String = ""
@@ -35,6 +38,9 @@ struct AddNewCar: View {
             Button(action: addNewCar) {
                 Text("Add Car")
             }
+        }
+        .onReceive(carStore.$cars) { receiveData in
+            cars = receiveData
         }
     }
     
@@ -65,6 +71,6 @@ struct DataInput: View {
 
 struct AddNewCar_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewCar(carStore: CarStore(cars: carData))
+        AddNewCar()
     }
 }

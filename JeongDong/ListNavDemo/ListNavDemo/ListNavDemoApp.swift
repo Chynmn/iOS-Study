@@ -11,7 +11,7 @@ import SwiftUI
 struct ListNavDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(CarStore(cars: carData))
         }
     }
 }
