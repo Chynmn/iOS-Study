@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(cars) { car in
+                ForEach(carStore.cars) { car in
                     ListCell(car: car)
                 }
                 .onDelete(perform: deleteItems)
@@ -28,9 +28,9 @@ struct ContentView: View {
                     .foregroundColor(.blue)
             }))
         }
-        .onReceive(carStore.$cars) { receiveData in
-            cars = receiveData
-        }
+//        .onReceive(carStore.$cars) { receiveData in
+//            cars = receiveData
+//        }
     }
     
     // 선택된 행의 오프셋이 인자로 전달됨
